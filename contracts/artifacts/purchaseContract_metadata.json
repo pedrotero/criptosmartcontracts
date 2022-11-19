@@ -1,0 +1,332 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "clients",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "idclient",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "comics",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "idcomic",
+						"type": "uint256"
+					},
+					{
+						"internalType": "int256",
+						"name": "price",
+						"type": "int256"
+					},
+					{
+						"internalType": "string",
+						"name": "name_comic",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "author",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "publish_date",
+						"type": "uint256"
+					},
+					{
+						"internalType": "int256",
+						"name": "ISBN",
+						"type": "int256"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "idclient",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct purchaseContract.Client",
+						"name": "owner",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "int256",
+						"name": "price",
+						"type": "int256"
+					}
+				],
+				"name": "createComic",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					}
+				],
+				"name": "getClient",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					}
+				],
+				"name": "getComic",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					}
+				],
+				"name": "getPurchase",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					}
+				],
+				"name": "geta",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "idcomic",
+								"type": "uint256"
+							},
+							{
+								"internalType": "int256",
+								"name": "price",
+								"type": "int256"
+							},
+							{
+								"internalType": "string",
+								"name": "name_comic",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "author",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "publish_date",
+								"type": "uint256"
+							},
+							{
+								"internalType": "int256",
+								"name": "ISBN",
+								"type": "int256"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "idclient",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct purchaseContract.Client",
+								"name": "owner",
+								"type": "tuple"
+							}
+						],
+						"internalType": "struct purchaseContract.Comic",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "purchases",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "idpurchase",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "purchase_date",
+						"type": "uint256"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "idcomic",
+								"type": "uint256"
+							},
+							{
+								"internalType": "int256",
+								"name": "price",
+								"type": "int256"
+							},
+							{
+								"internalType": "string",
+								"name": "name_comic",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "author",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "publish_date",
+								"type": "uint256"
+							},
+							{
+								"internalType": "int256",
+								"name": "ISBN",
+								"type": "int256"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "idclient",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct purchaseContract.Client",
+								"name": "owner",
+								"type": "tuple"
+							}
+						],
+						"internalType": "struct purchaseContract.Comic",
+						"name": "item",
+						"type": "tuple"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "idclient",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct purchaseContract.Client",
+						"name": "owner",
+						"type": "tuple"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "idclient",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct purchaseContract.Client",
+						"name": "buyer",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/purchaseContract.sol": "purchaseContract"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/purchaseContract.sol": {
+			"keccak256": "0xbacf4e804001b85793a8927a64d4330c9379da2dae8ae37b96837a1cd7992858",
+			"urls": [
+				"bzz-raw://7c113a3c35ae4205a4e511e43b2abb7111ce5d8d9329fd7aa6ce4ed3d3f299ac",
+				"dweb:/ipfs/QmWyzuTLKVKHTnjfZuSqoyWhjhHA2S1eb1kB9eWXkg8Qst"
+			]
+		}
+	},
+	"version": 1
+}
