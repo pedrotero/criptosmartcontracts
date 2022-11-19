@@ -43,7 +43,7 @@ contract purchaseContract {
         purchases.push(Purchase(nextIdPurchase++, _purchase_date, _item, _owner, _buyer));
     }
     
-    function createPurchase(uint _purchase_date, uint memory _item_id, uint memory _owner_id, uint memory _buyer_id) public {
+    function createPurchase(uint _purchase_date, uint  _item_id, uint  _owner_id, uint  _buyer_id) public {
         purchases.push(Purchase(nextIdPurchase++, _purchase_date, comics[_item_id], clients[_owner_id], clients[_buyer_id]));
     }
     

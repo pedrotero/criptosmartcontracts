@@ -161,6 +161,34 @@
 						"type": "uint256"
 					},
 					{
+						"internalType": "uint256",
+						"name": "_item_id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_owner_id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_buyer_id",
+						"type": "uint256"
+					}
+				],
+				"name": "createPurchase",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_purchase_date",
+						"type": "uint256"
+					},
+					{
 						"components": [
 							{
 								"internalType": "uint256",
@@ -652,10 +680,10 @@
 	},
 	"sources": {
 		"contracts/purchaseContract.sol": {
-			"keccak256": "0xf29c3a368b5938acf2f5875aa225f62773754c09e81d3a72db6315ebc178f628",
+			"keccak256": "0xab7d98c96ec8637bbd2d11f9f8d9d66e575a9c7e395667a4f7442befa0a4dd92",
 			"urls": [
-				"bzz-raw://c067afe6cd67bb440b99c9adbd85381e0e1ec4d4d0d0e2b1a080d678a52a881d",
-				"dweb:/ipfs/Qmcye1PRRzkB1SxDWGF313dQCRmiQTjMjjCm8XQyBuKkfV"
+				"bzz-raw://50b1c6a6151beab62dbf7e604bb831298d4c32037baf8c9547db325ed347b985",
+				"dweb:/ipfs/QmWZawx59JjKvLr2oX4K6hTEt1ze48AWnkGiZhMXei5XDy"
 			]
 		}
 	},
