@@ -19,6 +19,11 @@
 						"internalType": "uint256",
 						"name": "idclient",
 						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
 					}
 				],
 				"stateMutability": "view",
@@ -70,6 +75,11 @@
 								"internalType": "uint256",
 								"name": "idclient",
 								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
 							}
 						],
 						"internalType": "struct purchaseContract.Client",
@@ -83,12 +93,163 @@
 			{
 				"inputs": [
 					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					}
+				],
+				"name": "createClient",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
 						"internalType": "int256",
-						"name": "price",
+						"name": "_price",
 						"type": "int256"
+					},
+					{
+						"internalType": "string",
+						"name": "_name_comic",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_author",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_publish_date",
+						"type": "uint256"
+					},
+					{
+						"internalType": "int256",
+						"name": "_isbn",
+						"type": "int256"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "idclient",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							}
+						],
+						"internalType": "struct purchaseContract.Client",
+						"name": "_owner",
+						"type": "tuple"
 					}
 				],
 				"name": "createComic",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_purchase_date",
+						"type": "uint256"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "idcomic",
+								"type": "uint256"
+							},
+							{
+								"internalType": "int256",
+								"name": "price",
+								"type": "int256"
+							},
+							{
+								"internalType": "string",
+								"name": "name_comic",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "author",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "publish_date",
+								"type": "uint256"
+							},
+							{
+								"internalType": "int256",
+								"name": "ISBN",
+								"type": "int256"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "idclient",
+										"type": "uint256"
+									},
+									{
+										"internalType": "string",
+										"name": "name",
+										"type": "string"
+									}
+								],
+								"internalType": "struct purchaseContract.Client",
+								"name": "owner",
+								"type": "tuple"
+							}
+						],
+						"internalType": "struct purchaseContract.Comic",
+						"name": "_item",
+						"type": "tuple"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "idclient",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							}
+						],
+						"internalType": "struct purchaseContract.Client",
+						"name": "_owner",
+						"type": "tuple"
+					},
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "idclient",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							}
+						],
+						"internalType": "struct purchaseContract.Client",
+						"name": "_buyer",
+						"type": "tuple"
+					}
+				],
+				"name": "createPurchase",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -102,8 +263,26 @@
 					}
 				],
 				"name": "getClient",
-				"outputs": [],
-				"stateMutability": "nonpayable",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "idclient",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							}
+						],
+						"internalType": "struct purchaseContract.Client",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -115,32 +294,6 @@
 					}
 				],
 				"name": "getComic",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "id",
-						"type": "uint256"
-					}
-				],
-				"name": "getPurchase",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "id",
-						"type": "uint256"
-					}
-				],
-				"name": "geta",
 				"outputs": [
 					{
 						"components": [
@@ -180,6 +333,11 @@
 										"internalType": "uint256",
 										"name": "idclient",
 										"type": "uint256"
+									},
+									{
+										"internalType": "string",
+										"name": "name",
+										"type": "string"
 									}
 								],
 								"internalType": "struct purchaseContract.Client",
@@ -190,6 +348,164 @@
 						"internalType": "struct purchaseContract.Comic",
 						"name": "",
 						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					}
+				],
+				"name": "getPurchase",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "idpurchase",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "purchase_date",
+								"type": "uint256"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "idcomic",
+										"type": "uint256"
+									},
+									{
+										"internalType": "int256",
+										"name": "price",
+										"type": "int256"
+									},
+									{
+										"internalType": "string",
+										"name": "name_comic",
+										"type": "string"
+									},
+									{
+										"internalType": "string",
+										"name": "author",
+										"type": "string"
+									},
+									{
+										"internalType": "uint256",
+										"name": "publish_date",
+										"type": "uint256"
+									},
+									{
+										"internalType": "int256",
+										"name": "ISBN",
+										"type": "int256"
+									},
+									{
+										"components": [
+											{
+												"internalType": "uint256",
+												"name": "idclient",
+												"type": "uint256"
+											},
+											{
+												"internalType": "string",
+												"name": "name",
+												"type": "string"
+											}
+										],
+										"internalType": "struct purchaseContract.Client",
+										"name": "owner",
+										"type": "tuple"
+									}
+								],
+								"internalType": "struct purchaseContract.Comic",
+								"name": "item",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "idclient",
+										"type": "uint256"
+									},
+									{
+										"internalType": "string",
+										"name": "name",
+										"type": "string"
+									}
+								],
+								"internalType": "struct purchaseContract.Client",
+								"name": "owner",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "idclient",
+										"type": "uint256"
+									},
+									{
+										"internalType": "string",
+										"name": "name",
+										"type": "string"
+									}
+								],
+								"internalType": "struct purchaseContract.Client",
+								"name": "buyer",
+								"type": "tuple"
+							}
+						],
+						"internalType": "struct purchaseContract.Purchase",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "nextIdClients",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "nextIdPurchase",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "nextidComic",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -253,6 +569,11 @@
 										"internalType": "uint256",
 										"name": "idclient",
 										"type": "uint256"
+									},
+									{
+										"internalType": "string",
+										"name": "name",
+										"type": "string"
 									}
 								],
 								"internalType": "struct purchaseContract.Client",
@@ -270,6 +591,11 @@
 								"internalType": "uint256",
 								"name": "idclient",
 								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
 							}
 						],
 						"internalType": "struct purchaseContract.Client",
@@ -282,6 +608,11 @@
 								"internalType": "uint256",
 								"name": "idclient",
 								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
 							}
 						],
 						"internalType": "struct purchaseContract.Client",
@@ -321,10 +652,10 @@
 	},
 	"sources": {
 		"contracts/purchaseContract.sol": {
-			"keccak256": "0xbacf4e804001b85793a8927a64d4330c9379da2dae8ae37b96837a1cd7992858",
+			"keccak256": "0xf29c3a368b5938acf2f5875aa225f62773754c09e81d3a72db6315ebc178f628",
 			"urls": [
-				"bzz-raw://7c113a3c35ae4205a4e511e43b2abb7111ce5d8d9329fd7aa6ce4ed3d3f299ac",
-				"dweb:/ipfs/QmWyzuTLKVKHTnjfZuSqoyWhjhHA2S1eb1kB9eWXkg8Qst"
+				"bzz-raw://c067afe6cd67bb440b99c9adbd85381e0e1ec4d4d0d0e2b1a080d678a52a881d",
+				"dweb:/ipfs/Qmcye1PRRzkB1SxDWGF313dQCRmiQTjMjjCm8XQyBuKkfV"
 			]
 		}
 	},
