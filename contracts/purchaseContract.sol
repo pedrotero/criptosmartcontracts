@@ -42,7 +42,11 @@ contract purchaseContract {
     function createPurchase(uint _purchase_date, Comic memory _item, Client memory _owner, Client memory _buyer) public {
         purchases.push(Purchase(nextIdPurchase++, _purchase_date, _item, _owner, _buyer));
     }
-
+    
+    function createPurchase(uint _purchase_date, uint memory _item_id, uint memory _owner_id, uint memory _buyer_id) public {
+        purchases.push(Purchase(nextIdPurchase++, _purchase_date, _item_id, _owner_id, _buyer_id));
+    }
+    
     function createClient (string memory _name) public{
         clients.push(Client(nextIdClients++, _name));
     }
